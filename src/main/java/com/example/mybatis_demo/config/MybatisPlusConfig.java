@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 //@ConditionalOnBean(DataSource.class)
-@MapperScan("com.example.mybatis_demo.repository")
+@MapperScan({"com.example.mybatis_demo.repository"})
 public class MybatisPlusConfig {
 
     /**

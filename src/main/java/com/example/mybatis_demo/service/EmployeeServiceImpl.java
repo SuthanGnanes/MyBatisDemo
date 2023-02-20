@@ -1,7 +1,7 @@
 package com.example.mybatis_demo.service;
 
 import com.example.mybatis_demo.model.Employee;
-import com.example.mybatis_demo.repository.EmployeeRepository;
+import com.example.mybatis_demo.mapper.EmployeeMapper;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 
@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 public class EmployeeServiceImpl implements EmployeeService{
 
     @Resource
-    EmployeeRepository employeeRepository;
+    EmployeeMapper employeeMapper;
 
 
     @Override
     public Employee getEmployeeById(Long id) {
-        return employeeRepository.selectById(id);
+        return employeeMapper.selectById(id);
     }
 }

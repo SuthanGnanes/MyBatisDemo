@@ -3,8 +3,10 @@ package com.example.mybatis_demo.model;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.io.Serializable;
+
 @TableName("tb_employee")
-public class Employee {
+public class Employee implements Serializable {
     @TableId
     private  Long id;
     private String name;
